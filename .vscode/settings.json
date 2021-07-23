@@ -1,0 +1,6 @@
+{
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "c:\\Users\\Lenovo\\Desktop\\Python\\vidly\\venv\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true
+}
