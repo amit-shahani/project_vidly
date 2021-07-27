@@ -14,7 +14,7 @@ def index(request):
 
 
 def detail(request, movie_id):
-    # can use pk(pick) instead of id
+    # can use pk(primary key) instead of id
     #movie = Movies.objects.get(id=movie_id)
-    movie = get_object_or_404(Movies, id=movie_id)
+    movie = get_object_or_404(Movies, pk=movie_id)
     return render(request, 'movies/detail.html', {'movie': movie})

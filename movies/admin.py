@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Genre, Movies
+from django.db import models
+from .models import Cast, Genre, Movies, Actor
 
 # Register your models here.
 
@@ -14,5 +15,13 @@ class MovieAdmin(admin.ModelAdmin):
     exclude = ('date_created',)
 
 
+class ActorAdmin(admin.ModelAdmin):
+    list_display = ('name', 'name')
+
+
+# class CastAdmin(admin.ModelAdmin):
+
 admin.site.register(Genre, GenreAdmin)
 admin.site.register(Movies, MovieAdmin)
+admin.site.register(Actor, ActorAdmin)
+admin.site.register(Cast)
