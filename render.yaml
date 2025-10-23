@@ -6,6 +6,17 @@ services:
     repo: https://github.com/amit-shahani/project_vidly
     branch: master
     buildCommand: pip install -r requirements.txt
+    startCommand: ./start.sh
+    healthCheckPath: /
+    preDeployCommands: []
+services:
+  - type: web
+    name: vidly-web
+    env: python
+    plan: free
+    repo: https://github.com/amit-shahani/project_vidly
+    branch: master
+    buildCommand: pip install -r requirements.txt
     startCommand: gunicorn vidly.wsgi:application --bind 0.0.0.0:$PORT
     healthCheckPath: /
     preDeployCommands:
